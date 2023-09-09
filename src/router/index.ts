@@ -1,9 +1,6 @@
-import { Context, Next } from "koa";
-
 const router = require("koa-router")();
+const { createUser } = require("../controller/user");
 
-router.post("/", (ctx: Context, next: Next) => {
-  ctx.body = "hahahah";
-});
+router.post("/createUser", createUser);
 
 module.exports = router;
